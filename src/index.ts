@@ -18,56 +18,53 @@
 // @match        *://*.twitch.tv/popout/survivio/extensions/c79geyxwmp1zpas3qxbddzrtytffta/*
 // @grant        GM_xmlHttpRequest
 // ==/UserScript==
- 
-let times = [];
- 
+
+const times = [];
+
 const getPing = () => {
-    let ping = new Date;
- 
-    let request = new XMLHttpRequest();
+    const ping = new Date().valueOf();
+
+    const request = new XMLHttpRequest();
     request.open(`GET`, window.location.href, true);
- 
-    request.onload = (() => {
-        document.querySelector(`#latWrapper > span`).innerHTML = `${new Date - ping} LAT`;
+
+    request.onload = () => {
+        document.querySelector(`#latWrapper > span`).innerHTML = `${new Date().valueOf() - ping} LAT`;
         setTimeout(getPing, 500);
-    });
+    };
     request.send();
-}
- 
- 
- 
+};
+
 const getFPS = () => {
     window.requestAnimationFrame(() => {
         const now = performance.now();
- 
-        while(times.length > 0 && times[0] <= now - 1000) times.shift();
+
+        while (times.length > 0 && times[0] <= now - 1000) times.shift();
         times.push(now);
- 
+
         document.querySelector(`#fpsWrapper > span`).innerHTML = `${times.length} FPS`;
         getFPS();
     });
-}
- 
+};
+
 const getHealth = () => {
-    let healthBar = document.querySelector(`#ui-health-actual`);
+    const healthBar = document.querySelector(`#ui-health-actual`);
     return Math.round(healthBar.clientWidth / 4);
-}
+};
 const getBoost = () => {
     let boostActualWidth = 0;
- 
-    let boosts = document.querySelectorAll(`.ui-boost-base .ui-bar-inner`);
+
+    const boosts = document.querySelectorAll(`.ui-boost-base .ui-bar-inner`);
     boosts.forEach((boost, i) => {
-        if(i <= 1) boostActualWidth += parseInt(boost.style.width.slice(0, boost.style.width.length - 1)) / 4;
-        else if(i == 2) boostActualWidth += parseInt(boost.style.width.slice(0, boost.style.width.length - 1)) / 2.5;
-        else if(i == 3) boostActualWidth += parseInt(boost.style.width.slice(0, boost.style.width.length - 1)) / 10;
+        if (i <= 1) boostActualWidth += parseInt(boost.style.width.slice(0, boost.style.width.length - 1)) / 4;
+        else if (i == 2) boostActualWidth += parseInt(boost.style.width.slice(0, boost.style.width.length - 1)) / 2.5;
+        else if (i == 3) boostActualWidth += parseInt(boost.style.width.slice(0, boost.style.width.length - 1)) / 10;
     });
- 
- 
+
     return Math.round(boostActualWidth);
-}
- 
+};
+
 const injectCSS = () => {
-    let style = document.createElement(`style`);
+    const style = document.createElement(`style`);
     style.innerHTML = `
 .box-container {
     background: rgba(0, 0, 0, 0.25);
@@ -95,74 +92,73 @@ const injectCSS = () => {
 }
 `;
     document.head.appendChild(style);
-}
- 
- 
+};
+
 const createElements = () => {
-    //Add FPS
-    let fpsWrapper = document.createElement(`div`);
+    // Add FPS
+    const fpsWrapper = document.createElement(`div`);
     fpsWrapper.id = `fpsWrapper`;
     fpsWrapper.classList.add(`box-container`);
- 
-    let fps = document.createElement(`span`);
+
+    const fps = document.createElement(`span`);
     fpsWrapper.appendChild(fps);
- 
+
     document.querySelector(`#ui-top-left`).appendChild(fpsWrapper);
- 
-    //Add LAT
-    let latWrapper = document.createElement(`div`);
+
+    // Add LAT
+    const latWrapper = document.createElement(`div`);
     latWrapper.id = `latWrapper`;
     latWrapper.classList.add(`box-container`);
- 
-    let lat = document.createElement(`span`);
+
+    const lat = document.createElement(`span`);
     latWrapper.appendChild(lat);
     document.querySelector(`#ui-top-left`).appendChild(latWrapper);
- 
-    //Create bottom wrapper.
-    let boostCounter = document.querySelector(`#ui-boost-counter`);
-    let botWrapper = document.createElement(`div`);
+
+    // Create bottom wrapper.
+    const boostCounter = document.querySelector(`#ui-boost-counter`);
+    const botWrapper = document.createElement(`div`);
     botWrapper.id = `numWrapper`;
     document.querySelector(`#ui-bottom-center-0`).insertBefore(botWrapper, boostCounter);
- 
-    //Add HP
-    let hpWrapper = document.createElement(`div`);
+
+    // Add HP
+    const hpWrapper = document.createElement(`div`);
     hpWrapper.classList.add(`box-container`);
     hpWrapper.id = `hpWrapper`;
- 
-    let hpTxt = document.createElement(`span`);
+
+    const hpTxt = document.createElement(`span`);
     setInterval(() => (hpTxt.innerHTML = `HP: ${getHealth()}`));
     hpWrapper.appendChild(hpTxt);
     botWrapper.appendChild(hpWrapper);
- 
-    //Add Boost
-    let adWrapper = document.createElement(`div`);
+
+    // Add Boost
+    const adWrapper = document.createElement(`div`);
     adWrapper.classList.add(`box-container`);
     adWrapper.id = `btWrapper`;
- 
-    let adTxt = document.createElement(`span`);
+
+    const adTxt = document.createElement(`span`);
     setInterval(() => (adTxt.innerHTML = `AD: ${getBoost()}`));
     adWrapper.appendChild(adTxt);
     botWrapper.appendChild(adWrapper);
-}
- 
+};
+
 const runScripts = () => {
-    let a = document.createElement(`div`);
+    const a = document.createElement(`div`);
     a.id = `copd`;
     a.classList.add(`box-container`);
- 
-    let sp = document.createElement(`span`);
+
+    const sp = document.createElement(`span`);
     sp.innerHTML = `Created by DamienVesper#0001`;
     a.appendChild(sp);
- 
-    let b = document.querySelector(`#numWrapper`);
+
+    const b = document.querySelector(`#numWrapper`);
     document.querySelector(`#ui-bottom-center-0`).insertBefore(a, b);
-}
- 
+};
+
 const mainScript = () => {
     createElements();
     injectCSS();
     getFPS();
     getPing();
     runScripts();
-}
+};
 mainScript();
