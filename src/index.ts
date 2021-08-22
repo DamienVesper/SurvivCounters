@@ -56,8 +56,8 @@ const getBoost = () => {
     const boosts = document.querySelectorAll(`.ui-boost-base .ui-bar-inner`);
     boosts.forEach((boost, i) => {
         if (i <= 1) boostActualWidth += parseInt(boost.style.width.slice(0, boost.style.width.length - 1)) / 4;
-        else if (i == 2) boostActualWidth += parseInt(boost.style.width.slice(0, boost.style.width.length - 1)) / 2.5;
-        else if (i == 3) boostActualWidth += parseInt(boost.style.width.slice(0, boost.style.width.length - 1)) / 10;
+        else if (i === 2) boostActualWidth += parseInt(boost.style.width.slice(0, boost.style.width.length - 1)) / 2.5;
+        else if (i === 3) boostActualWidth += parseInt(boost.style.width.slice(0, boost.style.width.length - 1)) / 10;
     });
 
     return Math.round(boostActualWidth);
@@ -91,7 +91,7 @@ const injectCSS = () => {
             text-align: center;
         }
     `;
-    
+
     document.head.appendChild(style);
 };
 
@@ -155,11 +155,12 @@ const runScripts = () => {
     document.querySelector(`#ui-bottom-center-0`).insertBefore(a, b);
 };
 
-const mainScript = () => {
+const init = () => {
     createElements();
     injectCSS();
     getFPS();
     getPing();
     runScripts();
 };
-mainScript();
+
+init();
