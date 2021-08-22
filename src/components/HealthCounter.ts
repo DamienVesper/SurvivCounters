@@ -12,7 +12,7 @@ class HealthCounter extends Component {
         this.element.classList.add(`box-container`);
 
         this.element.appendChild(this.text);
-        document.querySelector(`#ui-top-left`).appendChild(this.element);
+        document.querySelector(`#bottomWrapper`).appendChild(this.element);
     }
 
     /**

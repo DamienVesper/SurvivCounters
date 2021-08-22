@@ -1,23 +1,36 @@
-// Network counters.
+// Counters.
 import FPSCounter from './components/FPSCounter';
 import PingCounter from './components/PingCounter';
 
-// Vitals counters.
 import AdrenCounter from './components/AdrenCounter';
 import HealthCounter from './components/HealthCounter';
 
+// Utilities.
+import BottomWrapper from './utils/BottomWrapper';
+
 interface CoreConfig {
-    fpsCounter: FPSCounter,
-    pingCounter: PingCounter,
-    adrenCounter: AdrenCounter,
-    healthCounter: HealthCounter
+    counters: {
+        fps: FPSCounter;
+        ping: PingCounter;
+        adren: AdrenCounter;
+        health: HealthCounter;
+    }
+    utils: {
+        bottomWrapper: BottomWrapper;
+    }
 };
 
 const Core: CoreConfig = {
-    fpsCounter: new FPSCounter(),
-    pingCounter: new PingCounter(),
-    adrenCounter: new AdrenCounter(),
-    healthCounter: new HealthCounter()
+    utils: {
+        bottomWrapper: new BottomWrapper() // This needs to be initialized first!
+    },
+
+    counters: {
+        fps: new FPSCounter(),
+        ping: new PingCounter(),
+        adren: new AdrenCounter(),
+        health: new HealthCounter()
+    }
 };
 
 export default Core;
