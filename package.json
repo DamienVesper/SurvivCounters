@@ -23,6 +23,10 @@
     "url": "https://github.com/DamienVesper/SurvivCounters/issues"
   },
   "homepage": "https://github.com/DamienVesper/SurvivCounters#readme",
+  "engines": {
+    "node": ">=16.6.0",
+    "yarn": ">=1.22"
+  },
   "devDependencies": {
     "@types/node": "^16.7.1",
     "@typescript-eslint/eslint-plugin": "^4.29.2",
