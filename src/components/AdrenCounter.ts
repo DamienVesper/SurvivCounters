@@ -17,7 +17,6 @@ class AdrenCounter extends Component {
 
     /**
      * Calculate current player adrenaline.
-     * @returns number
      */
     calculateAdren = (): number => {
         let adrenPercentage = 0;

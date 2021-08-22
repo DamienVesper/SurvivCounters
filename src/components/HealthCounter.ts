@@ -17,7 +17,6 @@ class HealthCounter extends Component {
 
     /**
      * Calculate current player health.
-     * @returns number
      */
     calculateHealth = (): number => {
         const healthBar = document.querySelector(`#ui-health-actual`);
