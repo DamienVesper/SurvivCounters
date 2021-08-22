@@ -1,0 +1,35 @@
+{
+  "name": "@damienvesper/survivio-counters",
+  "version": "1.0.0",
+  "description": "Counters for surviv.io.",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev:lint": "eslint . --fix --ext .ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DamienVesper/SurvivCounters.git"
+  },
+  "keywords": [
+    "survivio",
+    "tampermonkey",
+    "greasyfork"
+  ],
+  "author": "DamienVesper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DamienVesper/SurvivCounters/issues"
+  },
+  "homepage": "https://github.com/DamienVesper/SurvivCounters#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "typescript": "^4.3.5"
+  }
+}
