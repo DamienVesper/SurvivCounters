@@ -23,20 +23,15 @@ class FPSCounter extends Component {
 
     /**
      * Calculate the current FPS.
-     * @author Quintec Music
+     * @author Quintec
      */
     calculateFPS = (): void => {
         window.requestAnimationFrame(() => {
-            // Get the current timestamp.
             const now = performance.now();
 
-            // Shift a second's worth of frametimes.
             while (this.frameTimes.length > 0 && this.frameTimes[0] <= now - 1000) this.frameTimes.shift();
-
-            // Push current frametimes.
             this.frameTimes.push(now);
 
-            // Loop the method.
             this.calculateFPS();
         });
     }
