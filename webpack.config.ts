@@ -1,7 +1,6 @@
 import * as Webpack from 'webpack';
 
 import * as path from 'path';
-import * as fs from 'fs';
 
 const config: Webpack.Configuration = {
     entry: path.resolve(__dirname, `./src/index.ts`),
@@ -46,7 +45,7 @@ const config: Webpack.Configuration = {
 
     plugins: [
         new Webpack.ProgressPlugin(),
-        new Webpack.BannerPlugin({ banner: fs.readFileSync(path.resolve(__dirname, `./config/userscript.ts`), { encoding: `utf-8` }) })
+        new Webpack.BannerPlugin({ banner: `[file]\n Created by DamienVesper#0001.\nLicensed under the terms of the GNU AGPL v3.` })
     ]
 };
 
