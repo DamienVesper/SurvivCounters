@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Surviv.io Counters
 // @namespace    https://alru.ga
-// @version      2.0
+// @version      2.0.0
 // @description  An ingame counter overlay to view connection stats and in-game health stats.
 // @author       DamienVesper
 // @match        *://surviv.io/*

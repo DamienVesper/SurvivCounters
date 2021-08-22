@@ -1,6 +1,6 @@
 {
   "name": "@damienvesper/survivio-counters",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Counters for surviv.io.",
   "main": "src/index.ts",
   "scripts": {
