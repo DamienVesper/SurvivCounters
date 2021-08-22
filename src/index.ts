@@ -4,6 +4,7 @@
 // @version      2.0.0
 // @description  An ingame counter overlay to view connection stats and in-game health stats.
 // @author       DamienVesper
+// @license      AGPL-3.0
 // @match        *://surviv.io/*
 // @match        *://surviv2.io/*
 // @match        *://2dbattleroyale.com/*
