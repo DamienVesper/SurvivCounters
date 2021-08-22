@@ -28,7 +28,10 @@ class HealthCounter extends Component {
      * Update the health counter.
      */
     updateHealth = (): void => {
-        this.text.innerHTML = `HP: ${this.calculateHealth()}`;
+        const hp = this.calculateHealth();
+
+        this.text.innerHTML = `HP: ${hp}`;
+        this.element.style.display = (hp === 0 || hp === 100) ? `none` : `inline-block`;
     }
 }
 

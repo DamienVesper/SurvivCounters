@@ -39,7 +39,7 @@ class AdrenCounter extends Component {
         const adren = this.calculateAdren();
 
         this.text.innerHTML = `AD: ${adren}`;
-        this.element.hidden = adren === 0;
+        this.element.style.display = (adren === 0 || adren === 100) ? `none` : `inline-block`;
     }
 }
 
