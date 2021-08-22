@@ -28,8 +28,8 @@ const Core: CoreConfig = {
     counters: {
         fps: new FPSCounter(),
         ping: new PingCounter(),
-        adren: new AdrenCounter(),
-        health: new HealthCounter()
+        health: new HealthCounter(), // This must go before the adrenaline counter.
+        adren: new AdrenCounter()
     }
 };
 
