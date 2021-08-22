@@ -6,7 +6,7 @@ const config: Webpack.Configuration = {
     entry: path.resolve(__dirname, `./src/index.ts`),
     output: {
         path: path.resolve(__dirname, `./dist`),
-        filename: `bundle.min.js`,
+        filename: `surviv-counters.min.js`,
         clean: true
     },
     module: {
