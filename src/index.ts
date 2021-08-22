@@ -26,6 +26,10 @@ import Core from './Core';
 
 const init = (): void => {
     setInterval(Core.fpsCounter.updateFPS, 1e3); // Update FPS every second.
+    // setInterval(Core.pingCounter.updatePing, 1e3); // Update ping every second.
+
+    setInterval(Core.healthCounter.updateHealth, 25); // Update health every 25ms.
+    // setInterval(Core.healthCounter.updateAdren, 25); // Update adren every 25ms.
 };
 
 window.onload = () => {
