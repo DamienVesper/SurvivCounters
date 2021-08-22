@@ -45,7 +45,7 @@ const config: Webpack.Configuration = {
 
     plugins: [
         new Webpack.ProgressPlugin(),
-        new Webpack.BannerPlugin({ banner: `[file]\n Created by DamienVesper#0001.\nLicensed under the terms of the GNU AGPL v3.` })
+        new Webpack.BannerPlugin({ banner: `[file]\n Created by DamienVesper#5225.\nLicensed under the terms of the GNU AGPL v3.` })
     ]
 };
 
