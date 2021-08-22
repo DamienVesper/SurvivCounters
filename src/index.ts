@@ -66,31 +66,32 @@ const getBoost = () => {
 const injectCSS = () => {
     const style = document.createElement(`style`);
     style.innerHTML = `
-.box-container {
-    background: rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-    padding: 8px;
-}
-#hpWrapper, #btWrapper {
-    width: 50px;
-    margin-right: 5px;
-    display: inline-block;
-}
-#fpsWrapper, #latWrapper {
-    margin: 5px 0px;
-    width: 192px;
-}
-#ui-spectate-options {
-    top: 85px;
-}
-#copd {
-    position: relative;
-    top: 97px;
-    left: -55%;
-    width: 205px;
-    text-align: center;
-}
-`;
+        .box-container {
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            padding: 8px;
+        }
+        #hpWrapper, #btWrapper {
+            width: 50px;
+            margin-right: 5px;
+            display: inline-block;
+        }
+        #fpsWrapper, #latWrapper {
+            margin: 5px 0px;
+            width: 192px;
+        }
+        #ui-spectate-options {
+            top: 85px;
+        }
+        #copd {
+            position: relative;
+            top: 97px;
+            left: -55%;
+            width: 205px;
+            text-align: center;
+        }
+    `;
+    
     document.head.appendChild(style);
 };
 
