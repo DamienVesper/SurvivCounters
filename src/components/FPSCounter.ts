@@ -16,6 +16,9 @@ class FPSCounter extends Component {
 
         this.element.appendChild(this.text);
         document.querySelector(`#ui-top-left`).appendChild(this.element);
+
+        // Start calculating the FPS.
+        this.calculateFPS();
     }
 
     /**
