@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "Counters for surviv.io.",
   "main": "src/index.ts",
+  "private": true,
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
@@ -13,12 +14,12 @@
     "url": "git+https://github.com/DamienVesper/SurvivCounters.git"
   },
   "keywords": [
-    "survivio",
+    "surviv-io",
     "tampermonkey",
     "greasyfork"
   ],
   "author": "DamienVesper",
-  "license": "ISC",
+  "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/DamienVesper/SurvivCounters/issues"
   },
