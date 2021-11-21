@@ -38,7 +38,7 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
-    "sass": "^1.42.1",
+    "sass": "^1.43.4",
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.0",
     "ts-loader": "^9.2.6",
