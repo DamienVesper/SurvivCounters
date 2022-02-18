@@ -1,8 +1,8 @@
 import Component from '../Component';
 
 class PingCounter extends Component {
-    text: HTMLSpanElement
-    ping: number
+    text: HTMLSpanElement;
+    ping: number;
 
     constructor () {
         super();
@@ -13,7 +13,7 @@ class PingCounter extends Component {
         this.element.classList.add(`box-container`);
 
         this.element.appendChild(this.text);
-        document.querySelector(`#ui-top-left`).appendChild(this.element);
+        document.querySelector(`#ui-top-left`)?.appendChild(this.element);
 
         this.ping = 0;
 
@@ -26,14 +26,14 @@ class PingCounter extends Component {
      */
     calculatePing = (): number => {
         return 0;
-    }
+    };
 
     /**
      * Update the ping counter.
      */
     updatePing = (): void => {
         this.text.innerHTML = `${this.ping} MS`;
-    }
+    };
 }
 
 export default PingCounter;

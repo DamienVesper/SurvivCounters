@@ -1,7 +1,7 @@
 import Component from '../Component';
 
 class HealthCounter extends Component {
-    text: HTMLSpanElement
+    text: HTMLSpanElement;
 
     constructor () {
         super();
@@ -12,7 +12,7 @@ class HealthCounter extends Component {
         this.element.classList.add(`box-container`);
 
         this.element.appendChild(this.text);
-        document.querySelector(`#bottomWrapper`).appendChild(this.element);
+        document.querySelector(`#bottomWrapper`)?.appendChild(this.element);
     }
 
     /**
@@ -20,8 +20,8 @@ class HealthCounter extends Component {
      */
     calculateHealth = (): number => {
         const healthBar = document.querySelector(`#ui-health-actual`);
-        return Math.round(healthBar.clientWidth / 4);
-    }
+        return (healthBar != null) ? Math.round(healthBar.clientWidth / 4) : 0;
+    };
 
     /**
      * Update the health counter.
@@ -31,7 +31,7 @@ class HealthCounter extends Component {
 
         this.text.innerHTML = `HP: ${hp}`;
         this.element.style.display = (hp === 0 || hp === 100) ? `none` : `inline-block`;
-    }
+    };
 }
 
 export default HealthCounter;

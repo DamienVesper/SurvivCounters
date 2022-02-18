@@ -1,7 +1,7 @@
 import Component from '../Component';
 
 class AdrenCounter extends Component {
-    text: HTMLSpanElement
+    text: HTMLSpanElement;
 
     constructor () {
         super();
@@ -12,7 +12,7 @@ class AdrenCounter extends Component {
         this.element.classList.add(`box-container`);
 
         this.element.appendChild(this.text);
-        document.querySelector(`#bottomWrapper`).appendChild(this.element);
+        document.querySelector(`#bottomWrapper`)?.appendChild(this.element);
     }
 
     /**
@@ -29,7 +29,7 @@ class AdrenCounter extends Component {
         });
 
         return Math.round(adrenPercentage);
-    }
+    };
 
     /**
      * Update the adrenaline counter.
@@ -39,7 +39,7 @@ class AdrenCounter extends Component {
 
         this.text.innerHTML = `AD: ${adren}`;
         this.element.style.display = (adren === 0 || adren === 100) ? `none` : `inline-block`;
-    }
+    };
 }
 
 export default AdrenCounter;

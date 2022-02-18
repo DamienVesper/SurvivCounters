@@ -10,15 +10,15 @@ import BottomWrapper from './utils/BottomWrapper';
 
 interface CoreConfig {
     counters: {
-        fps: FPSCounter;
+        fps: FPSCounter
         // ping: PingCounter;
-        adren: AdrenCounter;
-        health: HealthCounter;
+        adren: AdrenCounter
+        health: HealthCounter
     }
     utils: {
-        bottomWrapper: BottomWrapper;
+        bottomWrapper: BottomWrapper
     }
-};
+}
 
 const Core: CoreConfig = {
     utils: {

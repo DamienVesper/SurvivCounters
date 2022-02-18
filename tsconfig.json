@@ -2,14 +2,11 @@
     "compilerOptions": {
         "target": "ES6",
         "module": "commonjs",
-
-        "moduleResolution": "node",
-        "outDir": "./build",
-        "jsx": "react",
-
+        "moduleResolution": "node",        
+        "outDir": "./dist",
         "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
         "resolveJsonModule": true,
-        "allowJs": true
-    }
+        "strictNullChecks": true
+    },
+    "include": ["./src/**/*", "./webpack.config.ts"]
 }

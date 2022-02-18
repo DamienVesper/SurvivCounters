@@ -1,9 +1,9 @@
 import Component from '../Component';
 
 class FPSCounter extends Component {
-    text: HTMLSpanElement
+    text: HTMLSpanElement;
 
-    frameTimes: number[]
+    frameTimes: number[];
 
     constructor () {
         super();
@@ -15,7 +15,7 @@ class FPSCounter extends Component {
         this.element.classList.add(`box-container`);
 
         this.element.appendChild(this.text);
-        document.querySelector(`#ui-top-left`).appendChild(this.element);
+        document.querySelector(`#ui-top-left`)?.appendChild(this.element);
 
         // Start calculating the FPS.
         this.calculateFPS();
@@ -34,14 +34,14 @@ class FPSCounter extends Component {
 
             this.calculateFPS();
         });
-    }
+    };
 
     /**
      * Update the FPS counter.
      */
     updateFPS = (): void => {
         this.text.innerHTML = `${this.frameTimes.length} FPS`;
-    }
+    };
 }
 
 export default FPSCounter;

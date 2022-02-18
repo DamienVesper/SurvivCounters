@@ -1,5 +1,5 @@
 class Component {
-    element: HTMLDivElement
+    element: HTMLDivElement;
 
     constructor () {
         this.element = document.createElement(`div`);
@@ -7,7 +7,7 @@ class Component {
 
     destroy = (): void => {
         this.element.remove();
-    }
+    };
 }
 
 export default Component;
