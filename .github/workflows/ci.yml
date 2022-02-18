@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+    branches: [dependabot/**]
+
+jobs:
+  nodejs:
+    name: Node.js
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install pNPM
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.30.0
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: pnpm
+
+      - name: Install Packages
+        run: pnpm install
+
+      - name: Cache Project
+        uses: actions/cache@v2
+        with:
+          path: ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Lint
+        run: pnpm run dev:lint:ci

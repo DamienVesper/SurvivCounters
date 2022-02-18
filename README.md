@@ -3,11 +3,11 @@
 <br />
 
 ### Installing Dependencies
-This project uses [Yarn](https://yarnpkg.com). It is advised not to mix package managers as this can result in non-deterministic behavior.
+This project uses [pnpm](https://pnpm.io). It is advised not to mix package managers as this can result in non-deterministic behavior.
 
 To install dependencies for this project, open a command line interface at the directory of your project, and run:
 ```sh
-yarn
+pnpm install
 ```
 
 This will create a `node_modules` directory in that of your project and add the packages there.
@@ -15,10 +15,10 @@ This will create a `node_modules` directory in that of your project and add the 
 ### Running the Project
 To setup a development server at `localhost:3000`, run
 ```sh
-yarn dev
+pnpm dev
 ```
 
 To build for production, run
 ```sh
-yarn build
+pnpm build
 ```

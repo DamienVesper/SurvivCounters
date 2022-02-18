@@ -26,7 +26,7 @@
   "homepage": "https://github.com/DamienVesper/SurvivCounters#readme",
   "engines": {
     "node": ">=16.6.0",
-    "yarn": ">=1.22"
+    "pnpm": ">=6.30"
   },
   "devDependencies": {
     "@types/node": "^17.0.18",
@@ -38,13 +38,13 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
-    "sass": "^1.49.7",
+    "sass": "^1.49.8",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5",
-    "webpack": "^5.69.0",
+    "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
     "webpack-merge": "^5.8.0"
   }
