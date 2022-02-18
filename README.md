@@ -13,7 +13,7 @@ pnpm install
 This will create a `node_modules` directory in that of your project and add the packages there.
 
 ### Running the Project
-To setup a development server at `localhost:3000`, run
+To create a development build with sourcemaps, run
 ```sh
 pnpm dev
 ```
