@@ -7,7 +7,8 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
-    "dev:lint": "eslint . --fix --ext .ts"
+    "dev:lint": "eslint . --fix --ext .ts",
+    "dev:lint:ci": "eslint . --ext .ts"
   },
   "repository": {
     "type": "git",
