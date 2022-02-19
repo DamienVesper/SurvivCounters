@@ -1,22 +1,22 @@
 // Stats counters stylesheet.
 
-.box-container {
+.sic-box-container {
     background: rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     padding: 8px;
 }
 
-#bottomWrapper {
+#sic-bottomWrapper {
     margin-bottom: 5px;
 }
 
-#hpWrapper, #adrenWrapper {
+#sic-hpWrapper, #sic-adrenWrapper {
     width: 50px;
     margin-right: 5px;
     display: inline-block;
 }
 
-#fpsWrapper, #latWrapper {
+#sic-fpsWrapper, #sic-latWrapper {
     margin: 5px 0px;
     width: 192px;
 }

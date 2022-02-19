@@ -4,7 +4,7 @@ class BottomWrapper extends Component {
     constructor () {
         super();
 
-        this.element.id = `bottomWrapper`;
+        this.element.id = `sic-bottomWrapper`;
 
         document.querySelector(`#ui-bottom-center-0`)?.insertBefore(this.element, document.querySelector(`#ui-boost-counter`));
 

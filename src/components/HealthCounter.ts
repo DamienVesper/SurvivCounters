@@ -8,11 +8,11 @@ class HealthCounter extends Component {
 
         this.text = document.createElement(`span`);
 
-        this.element.id = `hpWrapper`;
-        this.element.classList.add(`box-container`);
+        this.element.id = `sic-hpWrapper`;
+        this.element.classList.add(`sic-box-container`);
 
         this.element.appendChild(this.text);
-        document.querySelector(`#bottomWrapper`)?.appendChild(this.element);
+        document.querySelector(`#sic-bottomWrapper`)?.appendChild(this.element);
     }
 
     /**

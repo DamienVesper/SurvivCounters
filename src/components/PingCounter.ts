@@ -9,8 +9,8 @@ class PingCounter extends Component {
 
         this.text = document.createElement(`span`);
 
-        this.element.id = `pingWrapper`;
-        this.element.classList.add(`box-container`);
+        this.element.id = `sic-pingWrapper`;
+        this.element.classList.add(`sic-box-container`);
 
         this.element.appendChild(this.text);
         document.querySelector(`#ui-top-left`)?.appendChild(this.element);
