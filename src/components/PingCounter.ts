@@ -24,9 +24,7 @@ class PingCounter extends Component {
     /**
      * Calculate the amount of ping the player has.
      */
-    calculatePing = (): number => {
-        return 0;
-    };
+    calculatePing = (): number => 0;
 
     /**
      * Update the ping counter.
