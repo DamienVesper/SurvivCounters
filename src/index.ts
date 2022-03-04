@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Surviv.io Counters
 // @namespace    https://github.com/DamienVesper/SurvivCounters
-// @version      2.0.0
+// @version      2.0.1
 // @description  An ingame counter overlay to view connection stats and in-game health stats.
 // @author       DamienVesper
 // @license      AGPL-3.0
@@ -11,6 +11,7 @@
 // @match        *://2dbattleroyale.org/*
 // @match        *://piearesquared.info/*
 // @match        *://thecircleisclosing.com/*
+// @match        *://secantsecant.com/*
 // @match        *://parmainitiative.com/*
 // @match        *://ot38.club/*
 // @match        *://drchandlertallow.com/*
