@@ -6,7 +6,8 @@
     "extends": [
         "plugin:@typescript-eslint/recommended",
         "eslint:recommended",
-        "standard-with-typescript"
+        "standard-with-typescript",
+        "plugin:userscripts/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -26,6 +27,16 @@
         "quotes": [2, "backtick", "avoid-escape"],
         "prefer-arrow-callback": 2,
         "prefer-template": 2,
-        "@typescript-eslint/curly": 0
-    }
+        "@typescript-eslint/curly": 0,
+        "userscripts/filename-user": 0
+    },
+    "overrides": [
+        {
+            "files": ["*.ts", "*.js"],
+            "excludedFiles": "index.ts",
+            "rules": {
+                "userscripts/no-invalid-metadata": 0
+            }
+        }
+    ]
 }

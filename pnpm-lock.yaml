@@ -10,6 +10,7 @@ specifiers:
   eslint-plugin-import: ^2.25.4
   eslint-plugin-node: ^11.1.0
   eslint-plugin-promise: ^6.0.0
+  eslint-plugin-userscripts: ^0.2.0
   sass: ^1.49.9
   sass-loader: ^12.6.0
   style-loader: ^3.3.1
@@ -30,6 +31,7 @@ devDependencies:
   eslint-plugin-import: 2.25.4_eslint@8.10.0
   eslint-plugin-node: 11.1.0_eslint@8.10.0
   eslint-plugin-promise: 6.0.0_eslint@8.10.0
+  eslint-plugin-userscripts: 0.2.0_eslint@8.10.0
   sass: 1.49.9
   sass-loader: 12.6.0_sass@1.49.9+webpack@5.70.0
   style-loader: 3.3.1_webpack@5.70.0
@@ -978,6 +980,17 @@ packages:
       eslint: ^7.0.0 || ^8.0.0
     dependencies:
       eslint: 8.10.0
+    dev: true
+
+  /eslint-plugin-userscripts/0.2.0_eslint@8.10.0:
+    resolution: {integrity: sha512-sU0w1ipKBhSS1DPNq2qKj51H2KjJisgX0EBPThjyjlm4K0Xt5C0Pj+f4DIPDuYd5LA2+k0m3zHIli36EYjmeYg==}
+    engines: {node: '>=14.0.0 <18.0.0'}
+    peerDependencies:
+      eslint: '>=6.0.0 <=^8.0.0'
+    dependencies:
+      eslint: 8.10.0
+      requireindex: 1.2.0
+      semver: 7.3.5
     dev: true
 
   /eslint-scope/5.1.1:
@@ -1937,6 +1950,11 @@ packages:
   /regexpp/3.2.0:
     resolution: {integrity: sha512-pq2bWo9mVD43nbts2wGv17XLiNLya+GklZ8kaDLV2Z08gDCsGpnKn9BFMepvWuHCbyVvY7J5o5+BVvoQbmlJLg==}
     engines: {node: '>=8'}
+    dev: true
+
+  /requireindex/1.2.0:
+    resolution: {integrity: sha512-L9jEkOi3ASd9PYit2cwRfyppc9NoABujTP8/5gFcbERmo5jUoAKovIC3fsF17pkTnGsrByysqX+Kxd2OTNI1ww==}
+    engines: {node: '>=0.10.5'}
     dev: true
 
   /resolve-cwd/3.0.0:
